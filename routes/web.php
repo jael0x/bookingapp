@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@bienvenido');
 
 Route::get('/contacto', function () {
     return view('contacto');
@@ -22,3 +20,5 @@ Route::get('/contacto', function () {
 Route::get('/registro', function() {
     return view('registro');
 });
+
+Route::get('/evento/{id}', 'EventoController@show');
